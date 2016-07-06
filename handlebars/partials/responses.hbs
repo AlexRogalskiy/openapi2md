@@ -1,0 +1,18 @@
+{{#if responses}}
+{{#if produces}}
+{{>list-of-labels values=produces}}
+{{else if @root.produces}}
+[Uses default content-types](#sw-default-produces):
+{{>list-of-labels values=@root.produces}}
+{{/if}}
+
+{{#each responses}}
+{{! Use response-code and http-name as text}}
+{{@key}} {{swagger--response-code @key}}{{#if $ref}} [{{$ref}}]({{$ref}}){{/if}}
+{{#if $ref}}
+{{>response response=(json-schema--resolve-ref $ref)}}
+{{else}}
+{{>response response=.}}
+{{/if}}
+{{/each}}
+{{/if}}

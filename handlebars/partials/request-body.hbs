@@ -1,0 +1,15 @@
+{{json $root}}
+
+{{#if consumes}}
+{{>list-of-labels values=consumes}}
+{{else if @root.consumes}}
+[Uses default content-types](#sw-default-consumes):
+{{>list-of-labels values=@root.consumes}}
+{{/if}}
+
+{{#if body}}
+{{#with body}}
+{{description}}
+{{>model model=schema}}
+{{/with}}
+{{/if}}

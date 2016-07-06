@@ -1,0 +1,10 @@
+{{#if parameters}}
+#### Parameters
+{{#each parameters}}
+    {{#if $ref}}
+        {{>parameter-row parameter=(json-schema--resolve-ref $ref) $ref=$ref}}
+    {{else}}
+        {{>parameter-row parameter=.}}
+    {{/if}}
+{{/each}}
+{{/if}}

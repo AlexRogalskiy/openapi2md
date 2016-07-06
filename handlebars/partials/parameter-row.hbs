@@ -1,0 +1,9 @@
+| {{~#if key ~}}
+  [{{key}}](/parameters/{{key}})
+{{~/if}} | {{parameter.name}} | {{parameter.description}} | {{parameter.in}} | {{json-schema--datatype parameter}} {{~#if parameter.collectionFormat ~}}
+  {{swagger--collection-format parameter.collectionFormat parameter.name}}
+{{~/if}} | {{~#if parameter.required ~}}
+  required
+{{~/if}}{{~#if $ref ~}}
+  [{{$ref}}]({{$ref}})
+{{~/if}} |

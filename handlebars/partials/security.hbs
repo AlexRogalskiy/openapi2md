@@ -1,0 +1,9 @@
+{{#if security}}
+{{#each security}}
+{{#each this}}
+| [{{@key}}](#security-definition-{{@key}}) | {{~#each this ~}}
+  {{#unless @first}}, {{/unless}}{{this}}
+{{~/each}} |
+{{/each}}
+{{/each}}
+{{/if}}

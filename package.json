@@ -1,0 +1,35 @@
+{
+  "name": "openapi2md",
+  "version": "0.0.1",
+  "description": "Convert OpenAPI Specification to Markdown.",
+  "main": "./lib/index.js",
+  "bin": {
+    "openapi2md": "bin/openapi2md.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/replicatedhq/openapi2md"
+  },
+  "keywords": [
+    "OpenAPI",
+    "Markdown"
+  ],
+  "author": "Replicated, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "js-yaml": "^3.6.1",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^4.13.1",
+    "q": "^1.4.1",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.0.1",
+    "eslint-config-defaults": "^9.0.0"
+  }
+}
