@@ -1,23 +1,20 @@
 ### {{toUpperCase method}} *{{path}}*
 
-
 #### Summary
 {{summary}}
 
 {{#if tags}}
 Tags:
-{{~#each tags ~}}
-  [{{.}}](#tag-{{htmlId .}}){{#unless @last}}, {{/unless}}
-{{~/each ~}}
+{{#each tags}}[{{.}}](#tag-{{htmlId .}}){{#unless @last}}, {{/unless}}{{/each}}
 {{/if}}
-
 
 #### Description
 {{operation.description}}
 
-{{~#if _show_requst_body_section ~}}
-  {{>request-body consumes=operation.consumes body=_request_body}}
-{{~/if}}
+{{#if _show_requst_body_section}}
+{{>request-body consumes=operation.consumes body=_request_body}}
+{{/if}}
+
 {{>parameters parameters=parameters}}
 {{>responses}}
 {{>security}}

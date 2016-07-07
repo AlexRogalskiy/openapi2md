@@ -14,8 +14,8 @@
     "url": "github.com/replicatedhq/openapi2md"
   },
   "keywords": [
-    "OpenAPI",
-    "Markdown"
+    "openapi",
+    "markdown"
   ],
   "author": "Replicated, Inc.",
   "license": "MIT",
