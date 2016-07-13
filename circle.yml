@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 4.4.7
+
+test:
+  override:
+    - npm test
+
+deployment:
+  release:
+    branch: master
+    owner: replicatedhq
+    commands:
+      - echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
+      - npm publish 
