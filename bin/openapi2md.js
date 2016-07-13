@@ -22,11 +22,9 @@ load(program.args.length ? program.args[0] : undefined)
   .then(require('../lib/index').convert)
   .then(function(output) {
     // TODO: --output file
-    console.log('success');
     console.log(output); // eslint-disable-line no-console
   })
   .catch(function(error) {
-    console.log('error');
     console.error(chalk.red(error)); // eslint-disable-line no-console
   })
   .done();
